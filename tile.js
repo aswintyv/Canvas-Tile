@@ -14,9 +14,11 @@ var c_width = 850;
 		var hasmessage = true;
 		var layer1;
 		
+		var instructions = '';
+		
 		$(document).ready(function(){
 			
-
+			
 			$('body').live('imagesLoaded', function(){
 				layer = new Kinetic.Layer();
 				for(var i=0;i<columns*rows;i++){		
