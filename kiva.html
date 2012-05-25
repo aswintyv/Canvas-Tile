@@ -2,31 +2,46 @@
 <html lang="en">
   <head>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="http://www.kineticjs.com/download/kinetic-v3.9.5.js"></script>
-	<script src="tile.js"></script>
+    <script src="http://www.kineticjs.com/download/kinetic-v3.9.5.min.js"></script>
 
     <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
+     body {
+	margin:50px 0px; padding:0px;
+	text-align:center;
+	}
+	
+#container {
+	width:1000px;
+	margin:0px auto;
+	text-align:left;
+	padding:15px;
+	border:1px dashed #333;
+	background-color:#eee;
+	}
     </style>
 	</head>
   <body>
 
-    <div class="container">
+    <div id="container">
 		<div class="hero-unit">
-		<div style="width:100%; height:0px">
-			<div style="float:left; height:0px; width:100px; background-color:#00FF00" id="loader"> </div>
+		<div style="width:100%; height:30px" id= 'loader'>
 		</div>
 		<div style="clear:both" />
 		<div id ="inittools">
 			Rows: <select id="rows"><option value="2" label="2"/> <option value="3" label="3"/> </select><br />
 			Columns: <select id="columns"><option value="4" label="4"/> <option value="5" label="5"/> </select><br />
+			Kiva Lender Id: <input type="text" id="username"> </input> </br>
 			<button id="init">Start </button><br />
 		</div>
-		<div id="main" style="display: none"/>
-			<div id="mycanvas">
+		<div id="main" style="display: none; width: 100%" />
+			<div style=" height:30px; width: 100%; clear: both;text-align:center;" class = "undefine"></div>
+			<div style="width:100%; height: 315px; clear: both; ">
+				<div style="float: left; width: 75px; height: 315px" class = "undefine"></div>
+				<div style="float: left; width: 850px; height: 315px"> <div id="mycanvas"></div></div>
+				<div style="float: left; height: 315px; width=75px" class = "undefine"></div>
 			</div>
+			<div style=" height:30px; width: 100%; clear: both" class = "undefine"></div>
+
 			Title: <input type="text" id="title"> </input> </br>
 			Message: <input type="text" id="message"> </input> </br> 
 			<button id="clickme" >Generate Image ! </button>
@@ -36,6 +51,7 @@
     </div> <!-- /container -->
 
  
+	<script src="tile.js"></script>
 
   </body>
 </html>

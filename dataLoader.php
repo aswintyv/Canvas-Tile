@@ -11,7 +11,7 @@ $imgs = array();
 for($i=0; $i< count($loandata["loans"][$i]); $i++){
 $pid = $loandata["loans"][$i]['image']['id'];
 	if($pid != null){
-		$loanpic = file_get_contents("http://kiva.org/img/w300/".$pid.".jpg");
+		$loanpic = file_get_contents("http://kiva.org/img/w500/".$pid.".jpg");
 		file_put_contents('images/'.$id.'/'.$pid.'.jpg', $loanpic);
 		$imgs[] = 'images/'.$id.'/'.$pid.'.jpg';
 	}
